@@ -27,6 +27,18 @@ namespace QuickCopy
 
         private bool exited = false;
 
+        /**
+         * ==================== BUGS TO BE FIXED ==================== 
+         * Close menu item does not close the program
+         * Unchecking "close on copy" and rechecking it does not work properly
+         * Right clicking an item that is not selected does not select it
+         * Settings sometimes do not get saved?
+         * 
+         * ==================== FEATURES TO BE ADDED ==================== 
+         * File -> Save feature
+         * 
+         */
+
         public MainForm()
         {
             InitializeComponent();
