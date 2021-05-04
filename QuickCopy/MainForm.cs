@@ -42,6 +42,12 @@ namespace QuickCopy
 
             // create context menu for categories
             categoryMenu = new ContextMenu();
+            MenuItem addItemMenuItem = new MenuItem("Add Item...");
+            addItemMenuItem.Click += AddItem;
+            categoryMenu.MenuItems.Add(addItemMenuItem);
+
+            categoryMenu.MenuItems.Add("-"); // adds a separator
+
             MenuItem editCategoryMenuItem = new MenuItem("Edit...");
             editCategoryMenuItem.Click += EditCategory;
             categoryMenu.MenuItems.Add(editCategoryMenuItem);
@@ -49,10 +55,6 @@ namespace QuickCopy
             MenuItem deleteCategoryMenuItem = new MenuItem("Delete");
             deleteCategoryMenuItem.Click += DeleteCategory;
             categoryMenu.MenuItems.Add(deleteCategoryMenuItem);
-
-            MenuItem addItemMenuItem = new MenuItem("Add Item...");
-            addItemMenuItem.Click += AddItem;
-            categoryMenu.MenuItems.Add(addItemMenuItem);
 
             // create context menu for items
             itemMenu = new ContextMenu();
