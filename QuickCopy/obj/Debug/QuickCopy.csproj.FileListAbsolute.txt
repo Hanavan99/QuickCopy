@@ -1,0 +1,17 @@
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\bin\Debug\QuickCopy.exe.config
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\bin\Debug\QuickCopy.exe
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\bin\Debug\QuickCopy.pdb
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\obj\Debug\QuickCopy.csprojAssemblyReference.cache
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\obj\Debug\QuickCopy.InputForm.resources
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\obj\Debug\QuickCopy.MainForm.resources
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\obj\Debug\QuickCopy.Properties.Resources.resources
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\obj\Debug\QuickCopy.SettingsForm.resources
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\obj\Debug\QuickCopy.csproj.GenerateResource.cache
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\obj\Debug\QuickCopy.csproj.CoreCompileInputs.cache
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\obj\Debug\QuickCopy.exe
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\obj\Debug\QuickCopy.pdb
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\bin\Debug\Newtonsoft.Json.dll
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\bin\Debug\Newtonsoft.Json.xml
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\obj\Debug\QuickCopy.csproj.CopyComplete
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\obj\Debug\QuickCopy.EditItemForm.resources
+F:\Visual Studio Workspace\QuickCopy\QuickCopy\QuickCopy\obj\Debug\QuickCopy.EditCategoryForm.resources
