@@ -29,9 +29,7 @@ namespace QuickCopy
 
         /**
          * ==================== BUGS TO BE FIXED ==================== 
-         * Close menu item does not close the program
          * Unchecking "close on copy" and rechecking it does not work properly
-         * Right clicking an item that is not selected does not select it
          * Settings sometimes do not get saved?
          * 
          * ==================== FEATURES TO BE ADDED ==================== 
@@ -42,6 +40,9 @@ namespace QuickCopy
         public MainForm()
         {
             InitializeComponent();
+
+            // allow right clicking to change the selection
+            copyTree.MouseDown += (sender, args) => copyTree.SelectedNode = copyTree.GetNodeAt(args.X, args.Y);
 
             // create JSON serializer
             json = JsonSerializer.CreateDefault();
@@ -119,15 +120,8 @@ namespace QuickCopy
             }
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void LoadTreeData()
         {
-            // set system icons in tree view
-            //copyTree.ImageList = new ImageList();
-            //Icon folderIcon = IconHelper.GetStockIcon(4, IconHelper.SHGSI_SMALLICON);
-            //copyTree.ImageList.Images.Add(folderIcon);
-            //Icon itemIcon = IconHelper.GetStockIcon(58, IconHelper.SHGSI_SMALLICON);
-            //copyTree.ImageList.Images.Add(itemIcon);
-
             QuickCopyData sqlData = null, fileData = null;
             string url = Properties.Settings.Default.SQLServerURL;
             string database = Properties.Settings.Default.SQLServerDatabase;
@@ -161,7 +155,7 @@ namespace QuickCopy
                 {
                     MessageBox.Show(ex.Message);
                 }
-                catch (ArgumentNullException ex)
+                catch (ArgumentNullException)
                 {
                     MessageBox.Show("No QuickCopy data was found in the database.");
                 }
@@ -209,6 +203,12 @@ namespace QuickCopy
                     qcData = new QuickCopyData();
                 }
             }
+        }
+
+        private void UpdateTree()
+        {
+            // clear tree
+            copyTree.Nodes.Clear();
 
             // put data into tree
             foreach (KeyValuePair<Guid, Category> kv in qcData.Categories)
@@ -237,6 +237,20 @@ namespace QuickCopy
             }
 
             copyTree.ContextMenu = copyTreeMenu;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            // set system icons in tree view
+            //copyTree.ImageList = new ImageList();
+            //Icon folderIcon = IconHelper.GetStockIcon(4, IconHelper.SHGSI_SMALLICON);
+            //copyTree.ImageList.Images.Add(folderIcon);
+            //Icon itemIcon = IconHelper.GetStockIcon(58, IconHelper.SHGSI_SMALLICON);
+            //copyTree.ImageList.Images.Add(itemIcon);
+
+            LoadTreeData();
+
+            UpdateTree();
         }
 
         private void DeleteItem(object sender, EventArgs e)
@@ -465,6 +479,36 @@ namespace QuickCopy
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             //Exit(false);
+        }
+
+        private void uxClose_Click(object sender, EventArgs e)
+        {
+            Exit();
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void uxCloseNoSave_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to exit?") == DialogResult.OK)
+            {
+                System.Windows.Forms.Application.Exit();
+            }
+        }
+
+        private void uxReload_Click(object sender, EventArgs e)
+        {
+            LoadTreeData();
+            UpdateTree();
+        }
+
+        private void uxForceLoadRemote_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uxForceLoadLocal_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

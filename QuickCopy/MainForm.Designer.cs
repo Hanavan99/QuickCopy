@@ -31,13 +31,19 @@ namespace QuickCopy
             this.copyTree = new System.Windows.Forms.TreeView();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxReload = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxForceLoadRemote = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxForceLoadLocal = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.uxImport = new System.Windows.Forms.ToolStripMenuItem();
             this.uxExport = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxClose = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxCloseNoSave = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.preferencesMI = new System.Windows.Forms.ToolStripMenuItem();
             this.closeOnCopyCB = new System.Windows.Forms.CheckBox();
+            this.uxSave = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,38 +73,78 @@ namespace QuickCopy
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.uxSave,
+            this.uxReload,
+            this.uxForceLoadRemote,
+            this.uxForceLoadLocal,
+            this.toolStripSeparator1,
             this.uxImport,
             this.uxExport,
             this.toolStripSeparator3,
-            this.closeToolStripMenuItem});
+            this.uxClose,
+            this.uxCloseNoSave});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // uxReload
+            // 
+            this.uxReload.Name = "uxReload";
+            this.uxReload.Size = new System.Drawing.Size(207, 22);
+            this.uxReload.Text = "Reload";
+            this.uxReload.Click += new System.EventHandler(this.uxReload_Click);
+            // 
+            // uxForceLoadRemote
+            // 
+            this.uxForceLoadRemote.Name = "uxForceLoadRemote";
+            this.uxForceLoadRemote.Size = new System.Drawing.Size(207, 22);
+            this.uxForceLoadRemote.Text = "Force Load From Remote";
+            this.uxForceLoadRemote.Click += new System.EventHandler(this.uxForceLoadRemote_Click);
+            // 
+            // uxForceLoadLocal
+            // 
+            this.uxForceLoadLocal.Name = "uxForceLoadLocal";
+            this.uxForceLoadLocal.Size = new System.Drawing.Size(207, 22);
+            this.uxForceLoadLocal.Text = "Force Load From Local";
+            this.uxForceLoadLocal.Click += new System.EventHandler(this.uxForceLoadLocal_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(204, 6);
+            // 
             // uxImport
             // 
             this.uxImport.Name = "uxImport";
-            this.uxImport.Size = new System.Drawing.Size(180, 22);
+            this.uxImport.Size = new System.Drawing.Size(207, 22);
             this.uxImport.Text = "Import...";
             this.uxImport.Click += new System.EventHandler(this.uxImport_Click);
             // 
             // uxExport
             // 
             this.uxExport.Name = "uxExport";
-            this.uxExport.Size = new System.Drawing.Size(180, 22);
+            this.uxExport.Size = new System.Drawing.Size(207, 22);
             this.uxExport.Text = "Export...";
             this.uxExport.Click += new System.EventHandler(this.uxExport_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(204, 6);
             // 
-            // closeToolStripMenuItem
+            // uxClose
             // 
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.closeToolStripMenuItem.Text = "Close";
+            this.uxClose.Name = "uxClose";
+            this.uxClose.Size = new System.Drawing.Size(207, 22);
+            this.uxClose.Text = "Close";
+            this.uxClose.Click += new System.EventHandler(this.uxClose_Click);
+            // 
+            // uxCloseNoSave
+            // 
+            this.uxCloseNoSave.Name = "uxCloseNoSave";
+            this.uxCloseNoSave.Size = new System.Drawing.Size(207, 22);
+            this.uxCloseNoSave.Text = "Close Without Saving";
+            this.uxCloseNoSave.Click += new System.EventHandler(this.uxCloseNoSave_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -111,7 +157,7 @@ namespace QuickCopy
             // preferencesMI
             // 
             this.preferencesMI.Name = "preferencesMI";
-            this.preferencesMI.Size = new System.Drawing.Size(180, 22);
+            this.preferencesMI.Size = new System.Drawing.Size(144, 22);
             this.preferencesMI.Text = "Preferences...";
             this.preferencesMI.Click += new System.EventHandler(this.PreferencesMI_Click);
             // 
@@ -126,6 +172,12 @@ namespace QuickCopy
             this.closeOnCopyCB.TabIndex = 2;
             this.closeOnCopyCB.Text = "Close on copy";
             this.closeOnCopyCB.UseVisualStyleBackColor = true;
+            // 
+            // uxSave
+            // 
+            this.uxSave.Name = "uxSave";
+            this.uxSave.Size = new System.Drawing.Size(207, 22);
+            this.uxSave.Text = "Save";
             // 
             // MainForm
             // 
@@ -153,12 +205,18 @@ namespace QuickCopy
         private System.Windows.Forms.TreeView copyTree;
         private System.Windows.Forms.MenuStrip menu;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem uxClose;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem preferencesMI;
         private System.Windows.Forms.CheckBox closeOnCopyCB;
         private System.Windows.Forms.ToolStripMenuItem uxImport;
         private System.Windows.Forms.ToolStripMenuItem uxExport;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem uxCloseNoSave;
+        private System.Windows.Forms.ToolStripMenuItem uxReload;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem uxForceLoadRemote;
+        private System.Windows.Forms.ToolStripMenuItem uxForceLoadLocal;
+        private System.Windows.Forms.ToolStripMenuItem uxSave;
     }
 }
