@@ -1,4 +1,4 @@
-﻿namespace QuickCopy
+namespace QuickCopy
 {
     partial class MainForm
     {
@@ -36,14 +36,6 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addItemMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.editItemMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteItemMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.addFolderMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.renameFolderMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteFolderMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.preferencesMI = new System.Windows.Forms.ToolStripMenuItem();
             this.closeOnCopyCB = new System.Windows.Forms.CheckBox();
             this.menu.SuspendLayout();
@@ -86,94 +78,40 @@
             // uxImport
             // 
             this.uxImport.Name = "uxImport";
-            this.uxImport.Size = new System.Drawing.Size(119, 22);
+            this.uxImport.Size = new System.Drawing.Size(180, 22);
             this.uxImport.Text = "Import...";
             this.uxImport.Click += new System.EventHandler(this.uxImport_Click);
             // 
             // uxExport
             // 
             this.uxExport.Name = "uxExport";
-            this.uxExport.Size = new System.Drawing.Size(119, 22);
+            this.uxExport.Size = new System.Drawing.Size(180, 22);
             this.uxExport.Text = "Export...";
             this.uxExport.Click += new System.EventHandler(this.uxExport_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(116, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.closeToolStripMenuItem.Text = "Close";
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addItemMI,
-            this.editItemMI,
-            this.deleteItemMI,
-            this.toolStripSeparator2,
-            this.addFolderMI,
-            this.renameFolderMI,
-            this.deleteFolderMI,
-            this.toolStripSeparator1,
             this.preferencesMI});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
             // 
-            // addItemMI
-            // 
-            this.addItemMI.Name = "addItemMI";
-            this.addItemMI.Size = new System.Drawing.Size(177, 22);
-            this.addItemMI.Text = "Add Item...";
-            // 
-            // editItemMI
-            // 
-            this.editItemMI.Name = "editItemMI";
-            this.editItemMI.Size = new System.Drawing.Size(177, 22);
-            this.editItemMI.Text = "Edit Item...";
-            // 
-            // deleteItemMI
-            // 
-            this.deleteItemMI.Name = "deleteItemMI";
-            this.deleteItemMI.Size = new System.Drawing.Size(177, 22);
-            this.deleteItemMI.Text = "Delete Item";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(174, 6);
-            // 
-            // addFolderMI
-            // 
-            this.addFolderMI.Name = "addFolderMI";
-            this.addFolderMI.Size = new System.Drawing.Size(177, 22);
-            this.addFolderMI.Text = "Add Category...";
-            // 
-            // renameFolderMI
-            // 
-            this.renameFolderMI.Name = "renameFolderMI";
-            this.renameFolderMI.Size = new System.Drawing.Size(177, 22);
-            this.renameFolderMI.Text = "Rename Category...";
-            // 
-            // deleteFolderMI
-            // 
-            this.deleteFolderMI.Name = "deleteFolderMI";
-            this.deleteFolderMI.Size = new System.Drawing.Size(177, 22);
-            this.deleteFolderMI.Text = "Delete Category";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(174, 6);
-            // 
             // preferencesMI
             // 
             this.preferencesMI.Name = "preferencesMI";
-            this.preferencesMI.Size = new System.Drawing.Size(177, 22);
+            this.preferencesMI.Size = new System.Drawing.Size(180, 22);
             this.preferencesMI.Text = "Preferences...";
             this.preferencesMI.Click += new System.EventHandler(this.PreferencesMI_Click);
             // 
@@ -218,18 +156,9 @@
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem preferencesMI;
-        private System.Windows.Forms.ToolStripMenuItem addFolderMI;
-        private System.Windows.Forms.ToolStripMenuItem addItemMI;
-        private System.Windows.Forms.ToolStripMenuItem editItemMI;
-        private System.Windows.Forms.ToolStripMenuItem deleteItemMI;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem renameFolderMI;
-        private System.Windows.Forms.ToolStripMenuItem deleteFolderMI;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.CheckBox closeOnCopyCB;
         private System.Windows.Forms.ToolStripMenuItem uxImport;
         private System.Windows.Forms.ToolStripMenuItem uxExport;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
-

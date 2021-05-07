@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +27,18 @@ namespace QuickCopy
 
         private bool exited = false;
 
+        /**
+         * ==================== BUGS TO BE FIXED ==================== 
+         * Close menu item does not close the program
+         * Unchecking "close on copy" and rechecking it does not work properly
+         * Right clicking an item that is not selected does not select it
+         * Settings sometimes do not get saved?
+         * 
+         * ==================== FEATURES TO BE ADDED ==================== 
+         * File -> Save feature
+         * 
+         */
+
         public MainForm()
         {
             InitializeComponent();
@@ -42,6 +54,12 @@ namespace QuickCopy
 
             // create context menu for categories
             categoryMenu = new ContextMenu();
+            MenuItem addItemMenuItem = new MenuItem("Add Item...");
+            addItemMenuItem.Click += AddItem;
+            categoryMenu.MenuItems.Add(addItemMenuItem);
+
+            categoryMenu.MenuItems.Add("-"); // adds a separator
+
             MenuItem editCategoryMenuItem = new MenuItem("Edit...");
             editCategoryMenuItem.Click += EditCategory;
             categoryMenu.MenuItems.Add(editCategoryMenuItem);
@@ -49,10 +67,6 @@ namespace QuickCopy
             MenuItem deleteCategoryMenuItem = new MenuItem("Delete");
             deleteCategoryMenuItem.Click += DeleteCategory;
             categoryMenu.MenuItems.Add(deleteCategoryMenuItem);
-
-            MenuItem addItemMenuItem = new MenuItem("Add Item...");
-            addItemMenuItem.Click += AddItem;
-            categoryMenu.MenuItems.Add(addItemMenuItem);
 
             // create context menu for items
             itemMenu = new ContextMenu();
